@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Thermo Meter</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Mulish", "sans-serif";
+        }
+
+        .outerDiv {
+            width: 100vw;
+            height: 100vh;
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+
+        .innerDiv {
+            width: 100vw;
+            height: 70vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .main-heading {
+            padding: 30px;
+            color: #fff;
+            font-size: 200px;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0, 5);
+            /* display: flex;
+            flex-direction: row; */
+
+            /* display: inline; */
+            /* margin-left: 100px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <h1 class="main-heading">I am Thermometer<span id="temp1" class="fa"></span></h1>
+        </div>
+    </div>
+
+    <script>
+        const tempLoad = () => {
+            let temp1 = document.getElementById('temp1');
+            temp1.innerHTML = "&#xf2cb";
+
+            setTimeout(() => {
+                // temp1.style.paddingLeft = '40px';
+                // temp1.style.marginTop = '250px';
+                temp1.innerHTML = "&#xf2ca";
+                temp1.style.color = "#f8b627";
+            }, 1000);
+
+
+            setTimeout(() => {
+                temp1.innerHTML = "&#xf2c9";
+            }, 2000);
+
+            setTimeout(() => {
+                temp1.innerHTML = "&#xf2c8";
+            }, 3000);
+
+            setTimeout(() => {
+                temp1.innerHTML = "&#xf2c7";
+                temp1.style.color = "#d63031";
+            }, 4000);
+        }
+        tempLoad();
+
+        setInterval(tempLoad, 5000)
+    </script>
+</body>
+
+</html>

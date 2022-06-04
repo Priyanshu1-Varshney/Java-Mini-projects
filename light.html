@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            background: rgb(88, 40, 131);
+            color: aliceblue;
+        }
+
+        .container {
+
+            text-align: center;
+            margin-top: 100px;
+            width: 53%;
+            height: 262px;
+            padding-top: 130px;
+            margin-left: 300px;
+        }
+
+        h1 {
+
+            font-style: normal;
+            cursor: pointer;
+            text-transform: capitalize;
+
+        }
+
+        button {
+            cursor: pointer;
+            width: 150px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            box-shadow: 2px , 3px , 4px ,white;
+
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            margin: 8px;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Can you turn the ligth on?</h1>
+        <button id="btn1">Turn on the Ligth</button>
+        <img src="/project/off.png" alt="" id="image">
+        <button id="btn2">Turn off the Ligth</button>
+    </div>
+
+    <script>
+        const btn1 = document.querySelector('#btn1');
+        const btn2 = document.querySelector('#btn2');
+        const image = document.querySelector('#image');
+        btn1.addEventListener('click', () => {
+            image.src = '/project/onon.jpg';
+        });
+
+        btn2.addEventListener('click', () => {
+            image.src = '/project/off.png';
+        });
+    </script>
+
+</body>
+
+</html>
